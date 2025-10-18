@@ -1,12 +1,12 @@
 resource "aws_instance" "test-server" {
   ami = "ami-02d26659fd82cf299"
   instance_type = "t2.micro"
-  key_name = "server_key"
+  key_name = "jenkins-key"
   vpc_security_group_ids = ["sg-07f2f93d5e23047ea"]
   connection {
      type = "ssh"
      user = "ubuntu"
-     private_key = file("./server_key.pem")
+     private_key = file("./jenkins-key.pem")
      host = self.public_ip
      }
   provisioner "remote-exec" {
