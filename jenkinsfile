@@ -37,7 +37,7 @@ pipeline {
                 }
        stage('Push-Image') {
            steps {
-               sh 'docker push docker push ndivatar/financeme:1.0'
+               sh 'docker push ndivatar/financeme:1.0'
                      }
                 }
        stage('Config & Deployment') {
