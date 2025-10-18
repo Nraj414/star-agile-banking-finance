@@ -25,7 +25,7 @@ pipeline {
             }
        stage('Create Docker Image') {
            steps {
-               sh 'docker build -t cbabu85/banking-project-demo:3.0 .'
+               sh 'docker build -t docker push ndivatar/financeme:1.0 .'
                     }
                 }
        stage('Docker-Login') {
@@ -37,7 +37,7 @@ pipeline {
                 }
        stage('Push-Image') {
            steps {
-               sh 'docker push cbabu85/banking-project-demo:3.0'
+               sh 'docker push docker push ndivatar/financeme:1.0'
                      }
                 }
        stage('Config & Deployment') {
